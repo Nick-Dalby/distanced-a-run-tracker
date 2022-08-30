@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏃</text></svg>"
+    />
+
+    <title>Distanced</title>
+    <link rel="stylesheet" href="_base.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script defer src="responsify.js"></script>
+    <script defer src="week.js"></script>
+    <script defer src="month.js"></script>
+    <script defer src="stats.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h1>Hello Nick</h1>
+      </div>
+      <div>
+        <h3>total km this week</h3>
+        <p class="total-week-km">--.--</p>
+      </div>
+      <div>
+        <h3>total time this week</h3>
+        <p class="total-week-time">--:--</p>
+      </div>
+      <div>
+        <h3>average weekly pace</h3>
+        <p class="average-week-pace">--:--</p>
+      </div>
+      <div>
+        <h3>total km last month</h3>
+        <p class="total-month-km">--.--</p>
+      </div>
+      <div>
+        <h3>total time last month</h3>
+        <p class="total-month-time">--:--</p>
+      </div>
+    </nav>
+    <main>
+      <h2>This Week</h2>
+      <svg width="600" height="280" class="week"></svg>
+      <h2>Last Month</h2>
+      <svg width="650" height="420" class="month"></svg>
+      <svg width="300" height="200">
+        <g>
+          <circle cx="50" cy="30" r="22" class="km" />
+          <text x="50" y="75" class="legend">km</text>
+        </g>
+        <g>
+          <circle cx="140" cy="30" r="22" class="average" />
+          <text x="140" y="75" class="legend">average</text>
+        </g>
+      </svg>
+    </main>
+  </body>
+</html>

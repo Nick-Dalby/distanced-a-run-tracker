@@ -1,0 +1,179 @@
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}  
+
+/* colors */
+:root {
+  --background-main: #edf4f7;
+  --background-side: #f4f8fa;
+  --primary-blue: #32444d;
+  --secondary-blue: #b3c3cc;
+  --primary-orange: #ff6719;
+  --secondary-orange: #ffaa80;
+}
+
+body {
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--primary-blue);
+  background-color: var(--background-main);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: var(--background-side);
+  padding: 48px;
+}
+
+main {
+  padding: 48px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+h2:first-of-type {
+  margin-top: 0;  
+}
+
+
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  text-transform: uppercase;
+  margin: 24px 0 0 0;
+}
+
+p {
+  font-size: 24px;
+}
+
+rect {
+  fill: var(--primary-orange);
+  transition: fill 500ms;
+}
+
+rect.transparent {
+  opacity: 0;
+}
+
+rect:hover {
+  fill: var(--secondary-orange);
+}
+
+circle.distance {
+  fill: var(--secondary-blue);
+}
+
+circle.ring {
+  fill: none;
+  stroke: var(--primary-blue);
+  stroke-width: 3px;
+  opacity: 0.5;
+}
+
+
+text {
+  fill: var(--secondary-orange);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+text.km  {
+  fill: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 250ms;
+}
+
+text.pace  {
+  fill: var(--primary-blue);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+g:hover text.pace {
+  opacity: 1;
+}
+g:hover text.km {
+  opacity: 0;
+}
+
+
+
+text.day, text.month-km {
+  fill: var(--secondary-blue);
+  text-anchor: middle;
+  transition: opacity 250ms;
+}
+
+text.month-km {
+  opacity: 0;
+}
+
+g:hover text.day {
+  opacity: 0;
+}
+
+g:hover text.month-km {
+  opacity: 1;
+}
+
+/* legend */
+.km {
+  fill: var(--secondary-blue);
+}
+.average {
+  fill: none;
+  stroke: var(--primary-blue);
+  stroke-width: 3px;
+  opacity: 0.5;
+}
+
+.legend {
+  text-anchor: middle;
+  fill: var(--secondary-blue);
+}
+
+@media (max-width: 950px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 40px;
+  }
+  nav h1 {
+    font-size: 18px;
+  }
+  nav h2,h3, p {
+    font-size: 15px;
+    margin: 0;
+  }
+  nav div {
+    width: 200px;
+  }
+}
