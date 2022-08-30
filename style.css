@@ -3,7 +3,7 @@
   html {
     font-family: 'Inter var', sans-serif;
   }
-}  
+}
 
 /* colors */
 :root {
@@ -35,7 +35,8 @@ main {
   padding: 48px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 24px;
   font-weight: 700;
 }
@@ -46,9 +47,8 @@ h2 {
 }
 
 h2:first-of-type {
-  margin-top: 0;  
+  margin-top: 0;
 }
-
 
 h3 {
   font-size: 14px;
@@ -86,14 +86,13 @@ circle.ring {
   opacity: 0.5;
 }
 
-
 text {
   fill: var(--secondary-orange);
   font-size: 16px;
   font-weight: 400;
 }
 
-text.km  {
+text.km {
   fill: var(--primary-blue);
   font-size: 14px;
   font-weight: 700;
@@ -101,7 +100,7 @@ text.km  {
   transition: opacity 250ms;
 }
 
-text.pace  {
+text.pace {
   fill: var(--primary-blue);
   font-size: 14px;
   font-weight: 700;
@@ -116,9 +115,8 @@ g:hover text.km {
   opacity: 0;
 }
 
-
-
-text.day, text.month-km {
+text.day,
+text.month-km {
   fill: var(--secondary-blue);
   text-anchor: middle;
   transition: opacity 250ms;
@@ -152,7 +150,31 @@ g:hover text.month-km {
   fill: var(--secondary-blue);
 }
 
+.box-1 {
+  padding-right: 250px;
+  margin-bottom: 60px;
+}
+
+.box-2 {
+  padding-right: 250px;
+  margin-bottom: 200px;
+}
+
+@media (max-width: 1100px) {
+  .box-1 {
+    padding-right: 0px;
+    margin-bottom: 60px;
+  }
+  
+  .box-2 {
+    padding-right: 0px;
+    margin-bottom: 300px;
+  }
+  
+}
+
 @media (max-width: 950px) {
+
   body {
     grid-template-columns: 1fr;
   }
@@ -161,19 +183,43 @@ g:hover text.month-km {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
-    justify-content: space-around;
-    padding: 20px 40px;
+    justify-content: space-between;
   }
   nav h1 {
     font-size: 18px;
   }
-  nav h2,h3, p {
+  nav h2,
+  h3,
+  p {
     font-size: 15px;
     margin: 0;
   }
   nav div {
-    width: 200px;
+    width: 245px;
   }
+  main h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    margin: 0;
+    padding: 15px;
+  }
+  nav {
+    padding: 8px;
+  }
+  nav div {
+    width: 165px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    justify-content: space-between;
+  }
+  
 }

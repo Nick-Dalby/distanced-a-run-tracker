@@ -21,6 +21,7 @@ const weekGroups = weekSvg
   .append('g')
   .attr('transform', (d, i) => { return `translate(0, ${i * 40})` })
   
+  
 
   weekGroups
   .append('rect')

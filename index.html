@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="_base.css" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="https://d3js.org/d3.v7.min.js"></script>
-    
-    <script defer src="responsify.js"></script>
     <script defer src="week.js"></script>
     <script defer src="month.js"></script>
     <script defer src="stats.js"></script>
@@ -47,19 +45,28 @@
     </nav>
     <main>
       <h2>This Week</h2>
-      <svg width="600" height="280" class="week"></svg>
+      <!-- <svg width="600" height="280" class="week"></svg> -->
+      <div class="box-1">
+
+        <svg viewBox="0 0 550 280" class="week"></svg>
+      </div>
       <h2>Last Month</h2>
-      <svg width="650" height="420" class="month"></svg>
-      <svg width="300" height="200">
-        <g>
-          <circle cx="50" cy="30" r="22" class="km" />
-          <text x="50" y="75" class="legend">km</text>
-        </g>
-        <g>
-          <circle cx="140" cy="30" r="22" class="average" />
-          <text x="140" y="75" class="legend">average</text>
-        </g>
-      </svg>
+      <!-- <svg width="650" height="420" class="month"></svg> -->
+      <div class="box-2">
+
+        <svg viewBox="0 0 650 510" class="month">
+          
+          
+          <circle cx="50" cy="460" r="22" class="km" />
+          <text x="50" y="505" class="legend">km</text>
+          
+          
+          <circle cx="140" cy="460" r="22" class="average" />
+          <text x="140" y="505" class="legend">average</text>
+          
+        </svg>
+      </div>
+      
     </main>
   </body>
 </html>
